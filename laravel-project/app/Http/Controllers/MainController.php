@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+//questo lo aggiungiamo noi chiaramente
 use App\Models\Comic;
 
 class MainController extends Controller
@@ -13,4 +14,12 @@ class MainController extends Controller
 
         return view("comic.index", compact("comics"));
     }
+
+    public function show($id) {
+        $comic = Comic :: findOrFail($id);
+
+        return view("comic.show", compact("comic"));
+    }
 }
+
+
