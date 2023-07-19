@@ -34,7 +34,7 @@ class MainController extends Controller
 
         //dd($data);
 
-        //così creo l'elemento, ricorda un po il seeder questo blocco di codice
+        //così creo l'elemento e lo inserisco nel DB, ricorda un po il seeder questo blocco di codice
         $newComic = Comic :: create([
             'title'  => $data["title"],
             'description' => $data["description"],
