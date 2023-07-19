@@ -16,6 +16,7 @@ class MainController extends Controller
     }
 
     public function show($id) {
+        
         $comic = Comic :: findOrFail($id);
 
         return view("comic.show", compact("comic"));
@@ -47,6 +48,13 @@ class MainController extends Controller
 
         //return view("comic.store");
         return redirect() -> route("comic.show", $newComic -> id);
+    }
+
+    public function edit($id) {
+
+        $comic = Comic :: findOrFail($id);
+
+        return view("comic.edit", compact("comic"));
     }
 }
 

@@ -13,7 +13,7 @@
         {{$comic["id"]}}) {{$comic["title"]}}
         </a>
         <br>
-        <a class="btn btn-primary" href="">
+        <a class="btn btn-primary" href=" {{ route('comic.edit', $comic -> id) }} ">
             EDIT
         </a>
         <a class="btn btn-primary" href="">
