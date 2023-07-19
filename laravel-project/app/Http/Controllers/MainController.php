@@ -20,6 +20,11 @@ class MainController extends Controller
 
         return view("comic.show", compact("comic"));
     }
+
+    public function create(){
+
+        return view("comic.create");
+    }
 }
 
 
