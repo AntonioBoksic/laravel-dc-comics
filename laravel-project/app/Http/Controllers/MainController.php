@@ -27,11 +27,26 @@ class MainController extends Controller
     }
 
     public function store(Request $request){
+
+        //dd($request);
+
         $data = $request -> all();
 
-        dd($data);
+        //dd($data);
 
-        return view("comic.store");
+        //così creo l'elemento, ricorda un po il seeder questo blocco di codice
+        $newComic = Comic :: create([
+            'title'  => $data["title"],
+            'description' => $data["description"],
+            'thumb' => $data["thumb"],
+            'price' => $data["price"],
+            'series' => $data["series"],
+            'sale_date' => $data["sale_date"],
+            'type' => $data["type"],
+        ]);
+
+        //return view("comic.store");
+        return redirect() -> route("comic.show", $newComic -> id);
     }
 }
 
