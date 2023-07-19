@@ -3,7 +3,7 @@
 @section("content")
 <h1>
     Comics
-    <a href=" {{ route('comic.create') }} ">+</a>
+    <a href="{{ route('comic.create') }}">+</a>
 </h1>
 
 <ul>
