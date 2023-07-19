@@ -11,7 +11,8 @@
     
 </div>
 
-<form `action=" {{ route('comic.store') }} " method="POST">
+<form method="POST" action= " {{ route('comic.store') }} " >
+
     @csrf 
 
     <div>

@@ -9,3 +9,5 @@ Route::get("/", [MainController:: class, "index"]) -> name("comic.index");
 Route::get("/show/{id}", [MainController:: class, "show"]) -> name("comic.show");
 
 Route::get("/create", [MainController:: class, "create"]) -> name("comic.create");
+
+Route::post("/store", [MainController:: class, "store"]) -> name("comic.store");
