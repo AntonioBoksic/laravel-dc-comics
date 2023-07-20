@@ -31,7 +31,19 @@ class MainController extends Controller
 
         //dd($request);
 
-        $data = $request -> all();
+        //questo sotto che ho commentato è senza validazione
+        //$data = $request -> all();
+
+        //qui aggiungo la validazione
+        $data = $request -> validate([
+            'title' => 'required|max:255',
+           'description' => 'nullable',
+            'thumb' => 'nullable',
+            'price' => 'required|max:255',
+            'series' => 'required|max:255',
+            'sale_date' => 'required|max:255',
+            'type'=> 'required|max:255',
+        ]);
 
         //dd($data);
 
@@ -60,7 +72,19 @@ class MainController extends Controller
     public function update(Request $request, $id) {
         
         
-        $data = $request -> all();
+        //questo sotto che ho commentato è senza validazione
+        //$data = $request -> all();
+
+        //qui aggiungo la validazione
+        $data = $request -> validate([
+            'title' => 'required|max:255',
+           'description' => 'nullable',
+            'thumb' => 'nullable',
+            'price' => 'required|max:255',
+            'series' => 'required|max:255',
+            'sale_date' => 'required|max:255',
+            'type'=> 'required|max:255',
+        ]);
 
         $comic = Comic :: findOrFail($id);
 
