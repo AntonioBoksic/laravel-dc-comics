@@ -16,9 +16,11 @@
         <a class="btn btn-primary" href=" {{ route('comic.edit', $comic -> id) }} ">
             EDIT
         </a>
-        <a class="btn btn-primary" href=" {{ route('comic.delete', $comic -> id) }} ">
-            DELETE
-        </a>
+        <form method="POST" action=" {{ route('comic.delete', $comic -> id) }} ">
+            @csrf
+            @method("DELETE")
+            <input type="submit" value="Delete">
+        </form>
     </li>
     @endforeach
 </ul>

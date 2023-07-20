@@ -16,6 +16,8 @@ Route::get("/edit/{id}", [MainController:: class, "edit"]) -> name("comic.edit")
 
 Route::put("/update/{id}", [MainController:: class, "update"]) -> name("comic.update");
 
+Route::delete("/delete/{id}", [MainController:: class, "delete"]) -> name("comic.delete");
+
 
 
 
