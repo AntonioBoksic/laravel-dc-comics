@@ -14,6 +14,10 @@ Route::post("/store", [MainController:: class, "store"]) -> name("comic.store");
 
 Route::get("/edit/{id}", [MainController:: class, "edit"]) -> name("comic.edit");
 
+Route::put("/update/{id}", [MainController:: class, "update"]) -> name("comic.update");
+
+
+
 
 
 

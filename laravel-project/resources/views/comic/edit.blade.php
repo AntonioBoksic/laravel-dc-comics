@@ -11,7 +11,7 @@
     
 </div>
 
-<form method="POST" action= " {{ route('comic.update, $comic -> id') }} " >
+<form method="POST" action= " {{ route('comic.update', $comic -> id) }} " >
 
     @csrf 
     @method("PUT")
